@@ -1,0 +1,4 @@
+Model,Iterations,CV PR-AUC (mean),CV PR-AUC (sd),Best hyper-parameters,Time (s)
+Logistic Regression,12,0.5117013354671393,0.012646874967817691,"{""C"": 0.0746}",22.5
+Random Forest,12,0.5611306554118131,0.010460774350459051,"{""max_depth"": 11, ""max_features"": 0.3, ""min_samples_leaf"": 26, ""n_estimators"": 252}",225.5
+XGBoost,20,0.5635255005351503,0.01391980890855816,"{""colsample_bytree"": 0.6467, ""learning_rate"": 0.0104, ""max_depth"": 4, ""min_child_weight"": 1, ""n_estimators"": 312, ""reg_lambda"": 3.805, ""subsample"": 0.8424}",54.7

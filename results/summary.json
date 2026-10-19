@@ -1,0 +1,134 @@
+{
+  "rows_after_cleaning": 29965,
+  "duplicates_removed": 35,
+  "default_rate": 0.2213,
+  "best_model_test_auc": "Random Forest",
+  "test_metrics": {
+    "Baseline (Dummy)": {
+      "ROC-AUC": 0.5,
+      "PR-AUC": 0.2213,
+      "F1": 0.0,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "Brier": 0.1723,
+      "ECE": 0.0,
+      "Threshold": 0.5
+    },
+    "Logistic Regression": {
+      "ROC-AUC": 0.755,
+      "PR-AUC": 0.5198,
+      "F1": 0.5262,
+      "Precision": 0.5159,
+      "Recall": 0.537,
+      "Brier": 0.1402,
+      "ECE": 0.0135,
+      "Threshold": 0.31
+    },
+    "Random Forest": {
+      "ROC-AUC": 0.7765,
+      "PR-AUC": 0.5599,
+      "F1": 0.5356,
+      "Precision": 0.5033,
+      "Recall": 0.5724,
+      "Brier": 0.1353,
+      "ECE": 0.0102,
+      "Threshold": 0.27
+    },
+    "XGBoost": {
+      "ROC-AUC": 0.7759,
+      "PR-AUC": 0.5618,
+      "F1": 0.5401,
+      "Precision": 0.5395,
+      "Recall": 0.5407,
+      "Brier": 0.1352,
+      "ECE": 0.0142,
+      "Threshold": 0.29
+    }
+  },
+  "calibration": {
+    "Logistic Regression": {
+      "Brier": 0.1402,
+      "ECE": 0.0135,
+      "Mean predicted PD": 0.2195
+    },
+    "Random Forest": {
+      "Brier": 0.1353,
+      "ECE": 0.0102,
+      "Mean predicted PD": 0.2196
+    },
+    "XGBoost": {
+      "Brier": 0.1352,
+      "ECE": 0.0142,
+      "Mean predicted PD": 0.2195
+    },
+    "XGBoost (class-weighted)": {
+      "Brier": 0.1811,
+      "ECE": 0.2072,
+      "Mean predicted PD": 0.4285
+    },
+    "XGBoost (class-weighted) + isotonic": {
+      "Brier": 0.1358,
+      "ECE": 0.0156,
+      "Mean predicted PD": 0.2247
+    },
+    "XGBoost + isotonic": {
+      "Brier": 0.1353,
+      "ECE": 0.0154,
+      "Mean predicted PD": 0.2242
+    }
+  },
+  "fairness_gaps_best": [
+    {
+      "Attribute": "Age band",
+      "SPD (approval gap)": 0.0669,
+      "DIR (min/max approval)": 0.9136,
+      "EOD (FPR gap)": 0.0337,
+      "FNR gap": 0.1178,
+      "EqOdds": 0.1178,
+      "AUC gap": 0.0282,
+      "ECE gap": 0.0265,
+      "Base-rate gap": 0.0506
+    },
+    {
+      "Attribute": "Education",
+      "SPD (approval gap)": 0.1925,
+      "DIR (min/max approval)": 0.7834,
+      "EOD (FPR gap)": 0.0866,
+      "FNR gap": 0.4145,
+      "EqOdds": 0.4145,
+      "AUC gap": 0.2399,
+      "ECE gap": 0.1015,
+      "Base-rate gap": 0.2079
+    },
+    {
+      "Attribute": "Marital status",
+      "SPD (approval gap)": 0.0496,
+      "DIR (min/max approval)": 0.9346,
+      "EOD (FPR gap)": 0.0614,
+      "FNR gap": 0.0504,
+      "EqOdds": 0.0614,
+      "AUC gap": 0.0728,
+      "ECE gap": 0.1121,
+      "Base-rate gap": 0.0363
+    },
+    {
+      "Attribute": "Sex",
+      "SPD (approval gap)": 0.0409,
+      "DIR (min/max approval)": 0.9465,
+      "EOD (FPR gap)": 0.0411,
+      "FNR gap": 0.0268,
+      "EqOdds": 0.0411,
+      "AUC gap": 0.0335,
+      "ECE gap": 0.0166,
+      "Base-rate gap": 0.0372
+    }
+  ],
+  "demographic_shap_share": 0.0341,
+  "top5_shap": [
+    "PAY_1",
+    "MAX_DELAY",
+    "N_DELAYS",
+    "LIMIT_BAL",
+    "AVG_UTIL"
+  ]
+}
